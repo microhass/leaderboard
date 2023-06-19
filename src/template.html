@@ -7,12 +7,47 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <link rel="shortcut icon"
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="shortcut icon"
     href=<%=require("./../images/favicon.png")%> type="image/x-icon"
-    />
+    /> -->
     <title>Dashboard</title>
   </head>
   <body>
-    <main></main>
+    <main>
+      <h1>Leaderboard</h1>
+
+      <div>
+        <ul>
+          <li><span>name</span> <span>78</span></li>
+          <li><span>name</span> <span>78</span></li>
+          <li><span>name</span> <span>78</span></li>
+          <li><span>name</span> <span>78</span></li>
+          <li><span>name</span> <span>78</span></li>
+          <li><span>name</span> <span>78</span></li>
+          <li><span>name</span> <span>78</span></li>
+          <li><span>name</span> <span>78</span></li>
+          <li><span>name</span> <span>78</span></li>
+          <li><span>name</span> <span>78</span></li>
+        </ul>
+
+        <form>
+          <h2>Add new marks</h2>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="name"
+          />
+          <input
+            type="number"
+            name="mark"
+            id="mark"
+            placeholder="mark"
+          />
+          <button type="submit">Add</button>
+        </form>
+      </div>
+    </main>
   </body>
 </html>
