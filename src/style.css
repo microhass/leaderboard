@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 :root {
@@ -11,6 +11,10 @@
   --text-color: #fff;
   --hover-color: #303030;
   --focus-color: #383838;
+  --btn-background: #26b13d;
+  --btn-hover: #3ec554;
+  --btn-color: #000;
+  --header-color: #3cff5c;
 }
 
 .light-mode {
@@ -19,6 +23,10 @@
   --text-color: #000;
   --hover-color: #f0f0f0;
   --focus-color: #c8ffd8;
+  --btn-background: #1d16e4;
+  --btn-hover: #4039ff;
+  --btn-color: #fff;
+  --header-color: #1d16e4;
 }
 
 body {
@@ -26,6 +34,8 @@ body {
   place-items: center;
   padding: 2vh;
   min-height: 100vh;
+  background-color: var(--pri-background);
+  color: var(--text-color);
 }
 
 main {
@@ -36,40 +46,226 @@ main {
   border-radius: 4px;
 }
 
-main div {
+main .sections {
   display: grid;
-  gap: 30px;
+  gap: 40px;
   align-items: start;
 }
 
-main div ul {
+section {
+  background-color: var(--pri-background);
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.scores-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  margin: 25px 0;
+  border-radius: 4px;
+  background-color: var(--sec-background);
+}
+
+section ul {
   display: grid;
-  border: 1px solid;
+  gap: 2px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: var(--pri-background);
+  border-top: 2px solid var(--sec-background);
+  border-bottom: 2px solid var(--sec-background);
 }
 
 ul li {
   list-style-type: none;
+  padding: 15px;
   display: flex;
   justify-content: space-between;
-  padding: 15px;
+  align-items: center;
+  background-color: var(--sec-background);
 }
 
-li:nth-child(even) {
-  background-color: rgba(0, 0, 0, 0.2);
+li:hover {
+  background-color: var(--hover-color);
+}
+
+.score-form {
+  background-color: var(--sec-background);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 25px 0;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+}
+
+form input {
+  border: none;
+  padding: 10px;
+  background-color: var(--pri-background);
+  color: var(--text-color);
 }
 
 form button {
   align-self: flex-end;
 }
 
+button {
+  background-color: var(--btn-background);
+  color: var(--btn-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--btn-hover);
+}
+
+/* ====== Theme ====== */
+
+img {
+  width: 30px;
+}
+
+img:hover {
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+}
+
+ 
+
+.light-mode img:hover {
+  filter: brightness(0);
+}
+
+.themer #dark {
+  width: 20px;
+  display: none;
+}
+
+/* ======= Media Queries ======== */
 @media screen and (min-width: 768px) {
   main div {
     grid-template-columns: 5fr 4fr;
   }
 }
+
+/* 
+body {
+  background-color: var(--pri-background);
+  color: var(--text-color);
+  display: grid;
+  place-items: center;
+  padding: 10vh 0;
+  min-height: 100vh;
+}
+
+main {
+  background-color: var(--sec-background);
+  height: fit-content;
+  padding: 24px 0 0 0;
+  width: 80vw;
+  max-width: 700px;
+  margin-bottom: auto;
+  border-radius: 8px;
+}
+
+main .title {
+  text-transform: capitalize;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  font-size: 10px;
+  color: var(--header-color);
+}
+
+img {
+  width: 20px;
+  cursor: pointer;
+}
+
+.task img {
+  cursor: move;
+}
+
+
+
+
+
+
+
+
+
+
+form input {
+  color: var(--text-color);
+  border: none;
+  outline: none;
+  padding: 20px 0;
+  font-size: 16px;
+  width: 100%;
+}
+
+
+
+input::placeholder {
+  color: inherit;
+  opacity: 1;
+  font-style: italic;
+}
+
+button {
+  background-color: var(--btn-background);
+  color: var(--btn-color);
+  border: none;
+  width: 100%;
+  border-top: 2px solid var(--pri-background);
+  padding: 15px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+button {
+  cursor: pointer;
+  text-decoration: underline;
+  background-color: var(--btn-hover);
+}
+
+
+.notif-container {
+  position: fixed;
+  top: 18px;
+  left: 20vw;
+  width: 60vw;
+  padding: 0.4rem;
+  text-align: center;
+  background: transparent;
+  display: grid;
+  place-items: center;
+}
+
+.notification {
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 5px;
+  color: #fff;
+  transform: scale(0%);
+}
+
+.show-notification {
+  transform: unset;
+  z-index: 10;
+} */
