@@ -3,7 +3,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Todo List Project](#-todo-list-project)
+- [📖 Leaderboard Project](#-leaderboard-project)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -20,9 +20,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Todo List Project<a name="about-project"></a>
+# 📖 Leaderboard Project<a name="about-project"></a>
 
-**A simple JavaScript application to create, manage & organize tasks as a todo list. It is implemented with the help of `webpack` and other libraries.**
+**This is a project to test the use of APIs and working with JSON data to populate a web page. Created using JavaScript and HTML**
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -55,9 +55,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Add new tasks: Enter the new task to be added to the list.**
-- **Mark tasks completed: Mark a task as completed when done.**
-- **Drag & drop functionality to organize tasks.**
+- **Fetch data from an API.**
+- **Render fetched data.**
+- **Update UI based on the store state.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -65,7 +65,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-<a href="https://microhass-todo.netlify.app/"> See Project 🚀</a>
+<a href=""> See Project 🚀 ❌ No live link yet.</a>
 
 <!-- GETTING STARTED -->
 
@@ -80,13 +80,13 @@ To get get a local copy up and running, you can follow these simple steps:
 Clone the repository to your local machine using the following command:
 
 ```sh
-  git clone https://github.com/microhass/todo-list.git
+  git clone https://github.com/microhass/leaderboard.git
 ```
 
 Navigate to the project directory:
 
 ```sh
- cd todo-list
+ cd leaderboard
 ```
 
 Install the necessary dependencies by running:
@@ -107,9 +107,9 @@ That's it! With these simple steps, you should be able to get up and running wit
 
 ### Usage
 
-To use this project, simply visit the following link: https://github.com/microhass/todo-list
+To use this project, simply visit the following link: https://github.com/microhass/leaderboard
 
-- **Open the <a href="https://microhass.github.io/todo-list/dist">project 🚀</a> in your web browser.**
+- **Open the <a href="https://microhass.github.io/leaderboard/dist">project 🚀</a> in your web browser.**
 
 - **Use the provided form to add books to the list.**
 
