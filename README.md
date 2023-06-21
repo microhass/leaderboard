@@ -1,5 +1,7 @@
 <a name="readme-top"></a>
 
+![Preview](preview.png)
+
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)

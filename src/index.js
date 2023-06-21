@@ -16,14 +16,18 @@ const scoreSubmitHandler = async () => {
     return view.notify('danger', 'Please provide valid details!');
   }
 
+  view.setIsLoading(true, 'submit');
   const msg = await api.createScore(user, +score);
   view.clearInputs();
+  view.setIsLoading(false, 'submit');
   return view.notify('success', msg);
 };
 
 const updateScores = async () => {
+  view.setIsLoading(true, 'refresh');
   scores = await api.fetchScores();
   view.renderScores(scores);
+  view.setIsLoading(false, 'refresh');
   view.notify('success', 'Data updated successfully');
 };
 

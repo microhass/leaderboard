@@ -22,6 +22,7 @@
   --btn-hover: #3ec554;
   --btn-color: #000;
   --header-color: #3cff5c;
+  --forbidden: #0c691c;
 }
 
 .light-mode {
@@ -141,6 +142,7 @@ button {
   font-size: 13px;
   padding: 8px 20px;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 form button {
@@ -148,8 +150,12 @@ form button {
 }
 
 button:hover {
-  cursor: pointer;
   background-color: var(--btn-hover);
+}
+
+.is-loading {
+  cursor: not-allowed;
+  background-color: var(--forbidden) !important;
 }
 
 /* ====== Theme ====== */
