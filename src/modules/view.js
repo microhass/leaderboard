@@ -1,12 +1,18 @@
 const scoresList = document.querySelector('ul');
 const notifier = document.querySelector('.notification');
 
+const sortScores = (data) => data.sort((a, b) => b.score - a.score);
+
 export const renderScores = (scores) => {
-  const scoresMarkup = scores.map(
-    ({ user, score }) => `
+  const sortedScores = sortScores(scores);
+
+  const scoresMarkup = sortedScores
+    .map(
+      ({ user, score }) => `
     <li><span>${user}</span> <span>${score}</span></li>
   `,
-  ).join('');
+    )
+    .join('');
 
   scoresList.innerHTML = scoresMarkup;
 };
@@ -14,7 +20,6 @@ export const renderScores = (scores) => {
 export const getInputValues = () => {
   const inputUser = document.querySelector('#user').value;
   const inputScore = document.querySelector('#mark').value;
-
   return { user: inputUser, score: inputScore };
 };
 
