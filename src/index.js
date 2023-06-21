@@ -12,13 +12,12 @@ let scores = [];
 const scoreSubmitHandler = async () => {
   const { user, score } = view.getInputValues();
 
-  if (!inputsAreValid(user, score))
+  if (!inputsAreValid(user, score)) {
     return view.notify('danger', 'Please provide valid details!');
+  }
 
   const msg = await api.createScore(user, +score);
-  view.notify('success', msg);
-  view.clearInputs();
-  return;
+  return view.notify('success', msg);
 };
 
 const updateScores = async () => {

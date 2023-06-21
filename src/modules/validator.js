@@ -1,5 +1,5 @@
 const inputsAreValid = (name, score) => {
-  if (name === '' || isNaN(+score)) return false;
+  if (name === '' || Number.isNaN(+score)) return false;
   return true;
 };
 

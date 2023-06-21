@@ -1,5 +1,5 @@
 import axios from 'axios';
-import url from './urls';
+import url from './urls.js';
 
 export const createScore = async (user, score) => {
   const response = await axios.post(url, {

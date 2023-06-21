@@ -5,7 +5,7 @@ export const renderScores = (scores) => {
   const scoresMarkup = scores.map(
     ({ user, score }) => `
     <li><span>${user}</span> <span>${score}</span></li>
-  `
+  `,
   ).join('');
 
   scoresList.innerHTML = scoresMarkup;
@@ -20,10 +20,9 @@ export const getInputValues = () => {
 
 export const notify = (type, message) => {
   notifier.textContent = message;
-  notifier.style.backgroundColor =
-    type === 'danger' ? 'red' : 'green';
+  notifier.style.backgroundColor = type === 'danger' ? 'red' : 'green';
   notifier.classList.add('show-notification');
-  
+
   setTimeout(() => {
     notifier.classList.remove('show-notification');
   }, 3000);
