@@ -65,7 +65,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-<a href=""> See Project 🚀 ❌ No live link yet.</a>
+<a href="https://microhass.github.io/leaderboard/dist/"> See Project 🚀</a>
 
 <!-- GETTING STARTED -->
 
