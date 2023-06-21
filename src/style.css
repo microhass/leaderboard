@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   transition: all 0.1s ease-in-out;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 :root {
@@ -48,7 +49,7 @@ main {
 
 main .sections {
   display: grid;
-  gap: 40px;
+  gap: 20px;
   align-items: start;
 }
 
@@ -61,6 +62,7 @@ section {
   justify-content: space-between;
   align-items: center;
   padding: 5px;
+  color: var(--header-color);
 }
 
 .scores-title {
@@ -88,11 +90,14 @@ ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right: 10%;
   background-color: var(--sec-background);
+  text-transform: capitalize;
 }
 
 li:hover {
   background-color: var(--hover-color);
+  cursor: text;
 }
 
 .score-form {
@@ -108,11 +113,20 @@ form {
   gap: 20px;
 }
 
+form h2 {
+  margin-bottom: 20px;
+}
+
 form input {
   border: none;
   padding: 10px;
   background-color: var(--pri-background);
   color: var(--text-color);
+  border-radius: 4px;
+}
+
+input:focus {
+  outline: 1px solid var(--btn-background);
 }
 
 form button {
@@ -123,7 +137,8 @@ button {
   background-color: var(--btn-background);
   color: var(--btn-color);
   border: none;
-  padding: 10px 20px;
+  font-size: 13px;
+  padding: 8px 20px;
   border-radius: 4px;
 }
 
@@ -143,8 +158,6 @@ img:hover {
   cursor: pointer;
 }
 
- 
-
 .light-mode img:hover {
   filter: brightness(0);
 }
@@ -154,96 +167,7 @@ img:hover {
   display: none;
 }
 
-/* ======= Media Queries ======== */
-@media screen and (min-width: 768px) {
-  main div {
-    grid-template-columns: 5fr 4fr;
-  }
-}
-
-/* 
-body {
-  background-color: var(--pri-background);
-  color: var(--text-color);
-  display: grid;
-  place-items: center;
-  padding: 10vh 0;
-  min-height: 100vh;
-}
-
-main {
-  background-color: var(--sec-background);
-  height: fit-content;
-  padding: 24px 0 0 0;
-  width: 80vw;
-  max-width: 700px;
-  margin-bottom: auto;
-  border-radius: 8px;
-}
-
-main .title {
-  text-transform: capitalize;
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  font-size: 10px;
-  color: var(--header-color);
-}
-
-img {
-  width: 20px;
-  cursor: pointer;
-}
-
-.task img {
-  cursor: move;
-}
-
-
-
-
-
-
-
-
-
-
-form input {
-  color: var(--text-color);
-  border: none;
-  outline: none;
-  padding: 20px 0;
-  font-size: 16px;
-  width: 100%;
-}
-
-
-
-input::placeholder {
-  color: inherit;
-  opacity: 1;
-  font-style: italic;
-}
-
-button {
-  background-color: var(--btn-background);
-  color: var(--btn-color);
-  border: none;
-  width: 100%;
-  border-top: 2px solid var(--pri-background);
-  padding: 15px;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-
-button {
-  cursor: pointer;
-  text-decoration: underline;
-  background-color: var(--btn-hover);
-}
-
+/* ========== Notification ========== */
 
 .notif-container {
   position: fixed;
@@ -268,4 +192,15 @@ button {
 .show-notification {
   transform: unset;
   z-index: 10;
-} */
+} 
+
+/* ======= Media Queries ======== */
+@media screen and (min-width: 768px) {
+  main div {
+    grid-template-columns: 5fr 4fr;
+  }
+
+  main .sections {
+  gap: 40px;
+}
+}
