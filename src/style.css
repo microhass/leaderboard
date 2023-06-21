@@ -96,7 +96,6 @@ ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 10%;
   background-color: var(--sec-background);
   text-transform: capitalize;
 }
