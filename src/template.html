@@ -14,43 +14,50 @@
   </head>
   <body>
     <main>
-      <h1>Leaderboard</h1>
+      <div class="title">
+        <h1>Leaderboard</h1>
+        <div class="themer">
+          <img src=<%=require("./../images/light.png")%> alt="Switch
+          to light theme" title="Switch to light theme" id='light' />
+          <img src=<%=require("./../images/dark.png")%> alt="Switch to
+          light theme" title="Switch to dark theme" id='dark' />
+        </div>
+      </div>
 
-      <div>
-        <section>
-          <div class="scores">
+      <div class="sections">
+        <section scores-container>
+          <div class="scores-title">
             <h2>Recent scores</h2>
-            <button type="button">Refresh</button>
+            <img src=<%=require("./../images/favicon.png")%> alt="Leaderboard Logo"
+            />
+            <button type="button" id="refresh">Refresh</button>
           </div>
           <ul>
-            <li><span>name</span> <span>78</span></li>
-            <li><span>name</span> <span>78</span></li>
-            <li><span>name</span> <span>78</span></li>
-            <li><span>name</span> <span>78</span></li>
-            <li><span>name</span> <span>78</span></li>
-            <li><span>name</span> <span>78</span></li>
-            <li><span>name</span> <span>78</span></li>
+            <li>CLick the refresh 🔃 button to fetch game data 🎯</li>
           </ul>
         </section>
-        <section>
+        <section class="score-form">
           <form>
             <h2>Add your score</h2>
             <input
               type="text"
               name="name"
-              id="name"
+              id="user"
               placeholder="Your name"
             />
             <input
-              type="number"
+              type="text"
               name="mark"
               id="mark"
               placeholder="Your score"
             />
-            <button type="submit">Submit</button>
+            <button type="submit" id="submit">Submit</button>
           </form>
         </section>
       </div>
     </main>
+    <div class="notif-container">
+      <div class="notification">notify</div>
+    </div>
   </body>
 </html>
