@@ -17,6 +17,7 @@ const scoreSubmitHandler = async () => {
   }
 
   const msg = await api.createScore(user, +score);
+  view.clearInputs();
   return view.notify('success', msg);
 };
 
