@@ -89,6 +89,14 @@ section ul {
   background-color: var(--pri-background);
   border-top: 2px solid var(--sec-background);
   border-bottom: 2px solid var(--sec-background);
+  max-height: 530px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+section ul::-webkit-scrollbar {
+  display: none;
 }
 
 ul li {
